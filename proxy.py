@@ -48,7 +48,7 @@ class ProxyHandler(BaseHTTPRequestHandler):
 
         self.wfile.write(data)
 
-def run(server_class=HTTPServer, handler_class=ProxyHandler, port=8080):
+def run(server_class=HTTPServer, handler_class=ProxyHandler, port=3000):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
     print(f'Starting proxy server on port {port}...')
